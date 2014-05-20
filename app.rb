@@ -1,5 +1,8 @@
 require 'bundler'
+require './idea'
+
 Bundler.require
+
 
 class IdeaBoxApp < Sinatra::Base
 
@@ -7,13 +10,14 @@ class IdeaBoxApp < Sinatra::Base
     register Sinatra::Reloader
   end #For Automatic Reloading
 
+set :public_folder, File.dirname(__FILE__) + '/static'
   not_found do
     erb :error
   end
 
 
   get '/' do
-    erb :index,locals: {ideas: Idea.all}
+    erb :index, locals: {ideas: Idea.all}
   end
 
   post '/' do

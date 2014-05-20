@@ -1,29 +1,21 @@
-<html>
-  <head>
-    <title>IdeaBox</title>
-  </head>
-  <body>
-    <h1>IdeaBox</h1>
     <form action='/' method='POST'>
       <p>
         Your Idea:
       </p>
-      <input type='text' name='idea_title'/><br/>
-      <textarea name='idea_description'></textarea><br/>
-      <input type='submit'/>
+      <input type='text' class="form-control" placeholder="In think..." name='idea_title'/><br/>
+      <textarea class="form-control" rows="3" name='idea_description'></textarea><br/>
+      <input type='submit' class="btn btn-primary" />
     </form>
 
    <h3>Existing Ideas</h3>
 
-    <ul>
+    <ul class="list-group">
       <% ideas.each do |idea| %>
-        <li>
-          <%= idea.title %><br/>
-          <%= idea.description %>
+        <li class="list-group-item">
+          <span class="label label-default"><%= idea.title %></span>
+          <%= idea.description %> <span class="label label-info">Info</span>
         </li>
       <% end %>
     </ul>
 
-  </body>
-</html>
 

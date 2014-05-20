@@ -20,3 +20,11 @@ ideas:
   :description: Life Is Wonderful
   :type: info
   :type_name: life
+- :title: Drink
+  :description: more
+  :type: success
+  :type_name: health
+- :title: commit
+  :description: commit first.
+  :type: danger
+  :type_name: action

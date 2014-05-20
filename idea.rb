@@ -17,6 +17,12 @@ class Idea
         'work'
       when "info"
         'life'
+      when "success"
+        'health'
+      when "warning"
+        'read'
+      when "danger"
+        'action'
     end
   end
 

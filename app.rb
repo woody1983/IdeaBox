@@ -21,7 +21,8 @@ set :public_folder, File.dirname(__FILE__) + '/static'
   end
 
   post '/' do
-    idea = Idea.new(params['idea_title'],params['idea_description'],params['idea_type'],params['idea_type'])
+    type_idea =  params['idea_type']
+    idea = Idea.new(params['idea_title'],params['idea_description'],type_idea,params['idea_type'])
     idea.save
     redirect '/'
   end

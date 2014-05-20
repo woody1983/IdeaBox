@@ -2,7 +2,7 @@ require 'yaml/store'
 class Idea
   attr_reader :title, :description, :type, :type_name
 
-  def initialize(title, description, type, type_name)
+  def initialize(title, description, type='default', type_name)
     @title = title
     @description = description
     @type = type
@@ -11,7 +11,6 @@ class Idea
   end
 
   def type_list(set_type)
-    #pre_type_list = {primary:'work',info:'life'}
     case set_type
       when "primary"
         'work'
@@ -23,6 +22,8 @@ class Idea
         'read'
       when "danger"
         'action'
+      when 'default'
+        'temp'
     end
   end
 
@@ -41,7 +42,7 @@ class Idea
   def save
     database.transaction do |db|
       db['ideas'] ||= []
-      db['ideas'] << {title: @title, description: @description, type: @type, type_name: type_list(@type)}
+      db['ideas'] << {title: @title, description: @description, type: @type , type_name: type_list(@type)}
     end  
   end
 

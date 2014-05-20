@@ -32,11 +32,18 @@
    <h3>Existing Ideas</h3>
 
     <ul class="list-group">
-      <% ideas.each do |idea| %>
+      <% ideas.each_with_index do |idea,id| %>
         <li class="list-group-item">
           <span class="label label-<%= idea.type%>"><%= idea.type_name %></span>
           <span class="label label-default"><%= idea.title.capitalize %></span>
           <%= idea.description.capitalize %>
+            <div class="text-right">
+            <form action="/<%= id %>" method="POST">
+              <input type="hidden" name="_method" value="DELETE">
+              <input type="submit" class="" value="delete"/>
+            </form>
+            </div>
+
         </li>
       <% end %>
     </ul>

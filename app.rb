@@ -34,5 +34,10 @@ set :public_folder, File.dirname(__FILE__) + '/static'
     redirect '/'
   end
 
+  get '/:id/edit' do |id|
+    idea = Idea.find(id.to_i)
+    erb :edit, locals: {id: id, idea: idea}
+  end
+
 end
 

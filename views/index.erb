@@ -39,6 +39,7 @@
           <%= idea.description.capitalize %>
             <div class="text-right">
             <form action="/<%= id %>" method="POST">
+              <a href="/<%= id %>/edit">Edit</a>
               <input type="hidden" name="_method" value="DELETE">
               <input type="submit" class="" value="delete"/>
             </form>

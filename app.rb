@@ -5,12 +5,14 @@ Bundler.require
 
 
 class IdeaBoxApp < Sinatra::Base
-
+ 
   configure :development do
     register Sinatra::Reloader
   end #For Automatic Reloading
 
+set :method_override, true
 set :public_folder, File.dirname(__FILE__) + '/static'
+
   not_found do
     erb :error
   end
@@ -27,6 +29,10 @@ set :public_folder, File.dirname(__FILE__) + '/static'
     redirect '/'
   end
 
+  delete '/:id' do |id|
+    Idea.delete(id.to_i)
+    redirect '/'
+  end
 
 end
 

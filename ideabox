@@ -17,10 +17,6 @@ ideas:
   :description: "尽管使用jekyll来扩展功能不像wordpress中安装插件那样的方便，但是代码的加入和编写的过程完全可控，不必理会操作数据库的繁琐操作，同时liquid模板的可读性相比php要高的多，结果就是管理者在修改的时候有章可循，很大程度降低了维护的成本。"
   :type: warning
   :type_name: read
-- :title: "字体"
-  :description: "中文字体反而好看"
-  :type: primary
-  :type_name: work
 - :title: "植物花盆"
   :description: 'Click and Grow或许可以助你成为顶级园艺大师。你只需要浇点水，然后看着植物生长就可以了。Click and Grow公司推出了一款植物花盆，工作原理类似于打印机，一棵植物死亡后，接着换下一棵继续生长。这一盆花包含大量电子元件、传感器、电池、水泵和储水器等部件。植物花盆中还含有一个种子盒，种子盒中包含多粒种子、养料以及一颗内嵌软件的芯片。Click
     and Grow植物花盆，可以欣赏到荨麻花、绵毛水苏、金盏花等13种花草植物，每个种子盒储存一种，一株死了，可以换上另外一盒种子。保证花草植物不间断生长。 '
@@ -30,10 +26,6 @@ ideas:
   :description: "在app.rb上去捕获异常并设置默认值"
   :type: warning
   :type_name: read
-- :title: default
-  :description: test default
-  :type: default
-  :type_name: temp
 - :title: CSS
   :description: 'http://necolas.github.io/css3-github-buttons/ '
   :type: 
@@ -42,15 +34,3 @@ ideas:
   :description: http://getbootstrap.com/css/#forms
   :type: 
   :type_name: 
-- :title: asdasd
-  :description: asdasd
-  :type: default
-  :type_name: temp
-- :title: "阿斯达"
-  :description: "阿斯达 sss"
-  :type: 
-  :type_name: 
-- :title: "啊"
-  :description: "   单独"
-  :type: default
-  :type_name: temp

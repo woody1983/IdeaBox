@@ -6,7 +6,6 @@ class Idea
     @title = title
     @description = description
     @type = type
-    #@type_name = type_list[@type]
     @type_name = type_name
   end
 
@@ -22,8 +21,7 @@ class Idea
         'read'
       when "danger"
         'action'
-      when 'default'
-        'temp'
+      #when 'default'
     end
   end
 
@@ -53,6 +51,11 @@ class Idea
     Idea.database
   end
 
+  def self.delete(position)
+    database.transaction do
+      database['ideas'].delete_at(position)
+    end
+  end
 
 end
 

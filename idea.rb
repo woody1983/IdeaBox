@@ -1,15 +1,28 @@
 require 'yaml/store'
 class Idea
-  attr_reader :title, :description
+  attr_reader :title, :description, :type, :type_name
 
-  def initialize(title, description)
+  def initialize(title, description, type, type_name)
     @title = title
     @description = description
+    @type = type
+    #@type_name = type_list[@type]
+    @type_name = type_name
+  end
+
+  def type_list(set_type)
+    #pre_type_list = {primary:'work',info:'life'}
+    case set_type
+      when "primary"
+        'work'
+      when "info"
+        'life'
+    end
   end
 
   def self.all
     raw_ideas.map do |data|
-      new(data[:title], data[:description])
+      new(data[:title], data[:description], data[:type], data[:type_name] )
     end
   end
 
@@ -22,7 +35,7 @@ class Idea
   def save
     database.transaction do |db|
       db['ideas'] ||= []
-      db['ideas'] << {title: @title, description: @description}
+      db['ideas'] << {title: @title, description: @description, type: @type, type_name: type_list(@type)}
     end  
   end
 

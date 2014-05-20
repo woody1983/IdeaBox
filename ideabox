@@ -1,20 +1,22 @@
 ---
 ideas:
-- :title: diet
-  :description: pizza all the time
-- :title: diet_copy
-  :description: pizza all the time
-- :title: app
-  :description: social network for dogs
-- :title: excursion
-  :description: take everyone to the zoo
-- :title: party
-  :description: dance all night and all day
-- :title: Aloha
-  :description: Tada
-- :title: Sinatra
-  :description: Bootstrap+Sinatra
-- :title: Get
-  :description: getbootstrap
-- :title: ''
-  :description: sure
+- :title: info
+  :description: feel info
+  :type: info
+  :type_name: life
+- :title: _a
+  :description: aa
+  :type: info
+  :type_name: life
+- :title: asd
+  :description: asd
+  :type: primary
+  :type_name: work
+- :title: aa
+  :description: aaaa
+  :type: info
+  :type_name: life
+- :title: Life
+  :description: Life Is Wonderful
+  :type: info
+  :type_name: life

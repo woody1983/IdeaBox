@@ -34,3 +34,15 @@ ideas:
   :description: http://getbootstrap.com/css/#forms
   :type: 
   :type_name: 
+- :title: github.io
+  :description: http://blog.segmentfault.com/chemzqm/1190000000513006
+  :type: primary
+  :type_name: work
+- :title: Coffee
+  :description: 'I need Coffee. '
+  :type: success
+  :type_name: health
+- :title: 'reverse '
+  :description: reverse is better. I need record the new idea.
+  :type: warning
+  :type_name: read

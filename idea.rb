@@ -33,7 +33,7 @@ class Idea
 
   def self.raw_ideas
     database.transaction do |db|
-      db['ideas'] || []
+      db['ideas'].reverse || []
     end
   end
 
